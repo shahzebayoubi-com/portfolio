@@ -137,6 +137,7 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 
 .me .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(30px,5vw,70px);align-items:center}
 .circle{width:min(300px,70vw);aspect-ratio:1;border-radius:50%;margin-inline:auto;background:linear-gradient(160deg,var(--card2),var(--card));border:3px solid rgba(255,107,61,.6);display:grid;place-items:center;text-align:center;box-shadow:0 0 60px var(--glow)}
+.circle img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;border-radius:50%;display:block}
 .circle i{font-style:normal;font:800 clamp(64px,12vw,96px)/1 var(--display);color:var(--accent);display:block}
 .circle small{display:block;color:var(--muted);font-size:12.5px;margin-top:4px}
 .me h2{font-size:clamp(30px,4.6vw,48px);font-weight:800;color:var(--accent);margin-bottom:18px}
@@ -313,7 +314,7 @@ footer.site{background:#070C17;border-top:1px solid var(--line);padding-block:44
 
   <section class="dark me" id="about" style="--next:var(--paper)">
     <div class="wrap">
-      <div class="circle" role="img" aria-label="Photo of Shahzeb Ayoubi goes here"><div><i>SA</i><small>Your photo goes here</small></div></div>
+      <div class="circle"><img src="photo.jpg" alt="Shahzeb Ayoubi, paid ads specialist" width="720" height="720" loading="lazy"></div>
       <div>
         <p class="label">About me</p>
         <h2>Meet Shahzeb</h2>
@@ -339,7 +340,7 @@ footer.site{background:#070C17;border-top:1px solid var(--line);padding-block:44
   <section class="light call" id="call" style="--next:var(--navy)">
     <div class="wrap">
       <div class="callcard">
-        <div class="circle"><div><i>SA</i></div></div>
+        <div class="circle"><img src="photo.jpg" alt="Shahzeb Ayoubi" width="720" height="720" loading="lazy"></div>
         <h3>Schedule your call with Shahzeb</h3>
         <p>Audit call over WhatsApp</p>
       </div>
