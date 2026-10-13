@@ -111,6 +111,9 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .frame .bar i{width:9px;height:9px;border-radius:50%;background:#C5CBD8}
 .shot{aspect-ratio:16/9;border-radius:10px;background:repeating-linear-gradient(135deg,rgba(255,107,61,.1) 0 12px,rgba(255,107,61,.04) 12px 24px);border:1px dashed rgba(217,67,26,.5);display:grid;place-items:center;text-align:center;padding:12px;font-size:13px;color:var(--accent-deep)}
 .shotimg{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--paper-line)}
+.shotlink{display:block;text-decoration:none}
+.tap{display:block;margin-top:8px;text-align:center;font-size:12px;color:var(--accent-deep)}
+@media(min-width:900px){.cases{grid-template-columns:repeat(2,minmax(0,1fr))}.case.feature{grid-column:1/-1;flex-direction:row;align-items:stretch}.case.feature .frame{flex:0 0 60%;border-bottom:0;border-right:1px solid var(--paper-line);display:flex;flex-direction:column;justify-content:center}.case.feature .body{flex:1;align-content:center;padding:32px}}
 .case .body{padding:22px;display:grid;gap:14px;min-width:0}
 .case h3{font-size:22px;font-weight:800}
 .tag{display:inline-block;margin-top:8px;font-size:12px;padding:4px 12px;border-radius:999px;background:#FDEBE4;color:var(--accent-deep)}
@@ -277,8 +280,8 @@ footer.site{background:#070C17;border-top:1px solid var(--line);padding-block:44
         <p>Here is what I've done for the brands I've worked for.</p>
       </div>
       <div class="cases">
-        <article class="case">
-          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><a class="shotlink" href="haq-ads.png" target="_blank" rel="noopener"><img class="shotimg" src="haq-ads.png" alt="Meta Ads Manager showing Haq Electronics WhatsApp lead campaigns" width="1287" height="411" loading="lazy"></a></div>
+        <article class="case feature">
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><a class="shotlink" href="haq-ads.png" target="_blank" rel="noopener"><img class="shotimg" src="haq-crop.png" alt="Meta Ads Manager showing Haq Electronics WhatsApp lead campaigns" width="1450" height="662" loading="lazy"><span class="tap">Tap to view full screenshot</span></a></div>
           <div class="body">
             <div><h3>Haq Electronics</h3><span class="tag">Electronics retailer</span></div>
             <dl>
