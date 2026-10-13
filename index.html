@@ -54,15 +54,33 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .hero .lede{font-size:clamp(16px,2vw,20px);color:var(--ink);max-width:30em}
 .hero .lede+.lede{margin-top:14px;color:var(--muted)}
 .hero .cta{margin-top:34px}
-.portrait{position:relative;max-width:360px;width:100%;margin-inline:auto}
-.portrait .ph{aspect-ratio:4/5;border-radius:28px;background:linear-gradient(160deg,var(--card2),var(--card));border:1.5px solid rgba(255,107,61,.55);display:grid;place-items:center;text-align:center;padding:20px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
-.portrait .ph i{font-style:normal;display:block;font:800 clamp(80px,14vw,120px)/1 var(--display);color:var(--accent);letter-spacing:-.04em}
-.portrait .ph small{display:block;color:var(--muted);font-size:13px;margin-top:6px}
-.chip{position:absolute;background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:11px 15px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
-.chip b{display:block;font:800 21px/1.1 var(--display);color:var(--accent2);font-variant-numeric:tabular-nums}
-.chip span{font-size:12.5px;color:var(--muted)}
-.c1{left:-14px;bottom:42px}.c2{right:-12px;top:44px}
-@media(max-width:860px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.portrait{max-width:280px}.c1{left:-6px}.c2{right:-6px}}
+.visual{position:relative;display:grid;gap:22px;justify-items:center}
+.orb{--s:clamp(280px,34vw,410px);position:relative;width:var(--s);aspect-ratio:1;max-width:100%}
+.orb::before{content:"";position:absolute;inset:-12%;background:radial-gradient(closest-side,rgba(255,107,61,.34),transparent 72%);pointer-events:none}
+.orb::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.04),transparent 80%)}
+.ring{position:absolute;border-radius:50%;border:1.5px dashed rgba(255,154,112,.4);animation:spin 52s linear infinite}
+.r1{inset:0}
+.r2{inset:19%;animation-duration:34s;animation-direction:reverse;border-color:rgba(255,154,112,.28)}
+.b{position:absolute;inset:0;transform:rotate(var(--a))}
+.bi{position:absolute;top:0;left:50%;transform:translate(-50%,-50%)}
+.bu{transform:rotate(calc(var(--a) * -1))}
+.bs{width:calc(var(--s) * .15);aspect-ratio:1;border-radius:50%;background:var(--navy2);border:1.5px solid rgba(255,107,61,.6);display:grid;place-items:center;color:var(--accent2);box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 22px rgba(255,107,61,.25);animation:spin 52s linear infinite reverse}
+.r2 .bs{animation-duration:34s;animation-direction:normal;width:calc(var(--s) * .13)}
+.bs svg{width:52%;height:52%}
+.core{position:absolute;inset:31%;border-radius:50%;background:radial-gradient(circle at 32% 28%,#FF9A70,#E5522A 55%,#B93A14);display:grid;place-items:center;text-align:center;color:#fff;box-shadow:0 0 0 calc(var(--s) * .02) rgba(255,107,61,.18),0 0 calc(var(--s) * .16) rgba(255,107,61,.55);animation:pulse 3.2s ease-in-out infinite}
+.core small{display:block;font:700 calc(var(--s) * .034)/1 var(--display);letter-spacing:.14em;opacity:.9}
+.core strong{display:block;font:800 calc(var(--s) * .105)/1.05 var(--display);letter-spacing:-.03em;margin:calc(var(--s) * .008) 0}
+.flow{display:flex;align-items:center;gap:12px;width:min(100%,400px)}
+.fb{flex:none;background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;box-shadow:0 14px 34px rgba(0,0,0,.4)}
+.fb b{display:block;font:800 19px/1.1 var(--display);color:var(--accent2);font-variant-numeric:tabular-nums}
+.fb span{font-size:12px;color:var(--muted)}
+.fb.big b{font-size:23px;color:#fff}
+.arrow{position:relative;flex:1;height:2px;min-width:30px;background:repeating-linear-gradient(90deg,var(--accent) 0 8px,transparent 8px 16px);background-size:16px 2px;animation:march 1s linear infinite}
+.arrow::after{content:"";position:absolute;right:-2px;top:-5px;border:6px solid transparent;border-left:9px solid var(--accent);border-right:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes march{to{background-position:16px 0}}
+@keyframes pulse{50%{transform:scale(1.035)}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.orb{--s:min(84vw,340px)}}
 
 .numbers .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(30px,5vw,64px);align-items:center}
 .big{text-align:center}
@@ -155,7 +173,7 @@ footer.site{background:#070C17;border-top:1px solid var(--line);padding-block:44
 .fbase{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;margin-top:34px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
 .fbase a{color:var(--muted);text-decoration:none}
 .fbase a:hover{color:var(--ink)}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
@@ -176,10 +194,24 @@ footer.site{background:#070C17;border-top:1px solid var(--line);padding-block:44
         <p class="lede">Let's make every rupee of your ad budget count and grow your store.</p>
         <a class="cta" href="https://wa.me/923095697924?text=Hi%20Shahzeb%2C%20I%27d%20like%20to%20schedule%20an%20audit%20call%20for%20my%20store." target="_blank" rel="noopener"><b>Speak to me today</b><span>Schedule your audit call now</span></a>
       </div>
-      <div class="portrait">
-        <div class="ph"><div><i>SA</i><small>Your photo goes here</small></div></div>
-        <div class="chip c1"><b>PKR 50M+</b><span>Sales generated</span></div>
-        <div class="chip c2"><b>PKR 4M+</b><span>Ad spend managed</span></div>
+      <div class="visual" aria-hidden="true">
+        <svg width="0" height="0" style="position:absolute"><defs>
+          <symbol id="i-mega" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4h3.2l6.3 4V6L7.2 10H4z"/><path d="M16.5 9a4 4 0 0 1 0 6"/></g></symbol>
+          <symbol id="i-cart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.2l2.2 10.5a1 1 0 0 0 1 .8h8.3a1 1 0 0 0 1-.8L19.2 8H6.3"/><circle cx="9.5" cy="19" r="1.4"/><circle cx="16.5" cy="19" r="1.4"/></g></symbol>
+          <symbol id="i-play" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10 9.5v5l4.3-2.5z" fill="currentColor"/></g></symbol>
+          <symbol id="i-chart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5.5-5.5 4 4L21 7"/><path d="M15 7h6v6"/></g></symbol>
+          <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><text x="12" y="15.4" text-anchor="middle" font-size="9" font-weight="800" fill="currentColor" font-family="Arial,sans-serif">Rs</text></symbol>
+        </defs></svg>
+        <div class="orb">
+          <div class="ring r1"><div class="b" style="--a:0deg"><div class="bi"><div class="bu"><div class="bs"><svg><use href="#i-mega"/></svg></div></div></div></div><div class="b" style="--a:90deg"><div class="bi"><div class="bu"><div class="bs"><svg><use href="#i-cart"/></svg></div></div></div></div><div class="b" style="--a:180deg"><div class="bi"><div class="bu"><div class="bs"><svg><use href="#i-play"/></svg></div></div></div></div><div class="b" style="--a:270deg"><div class="bi"><div class="bu"><div class="bs"><svg><use href="#i-chart"/></svg></div></div></div></div></div>
+          <div class="ring r2"><div class="b" style="--a:45deg"><div class="bi"><div class="bu"><div class="bs"><svg><use href="#i-coin"/></svg></div></div></div></div><div class="b" style="--a:225deg"><div class="bi"><div class="bu"><div class="bs"><svg><use href="#i-coin"/></svg></div></div></div></div></div>
+          <div class="core"><div><small>PKR</small><strong>50M+</strong><small>IN SALES</small></div></div>
+        </div>
+        <div class="flow">
+          <div class="fb"><b>PKR 4M+</b><span>Ad spend</span></div>
+          <div class="arrow"></div>
+          <div class="fb big"><b>PKR 50M+</b><span>Sales</span></div>
+        </div>
       </div>
     </div>
   </section>
