@@ -112,15 +112,22 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .shot{aspect-ratio:16/9;border-radius:10px;background:repeating-linear-gradient(135deg,rgba(255,107,61,.1) 0 12px,rgba(255,107,61,.04) 12px 24px);border:1px dashed rgba(217,67,26,.5);display:grid;place-items:center;text-align:center;padding:12px;font-size:13px;color:var(--accent-deep)}
 .shotimg{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--paper-line)}
 .shotlink{display:block;text-decoration:none}
-.shotlink.second{margin-top:16px}
 .tap{display:block;margin-top:8px;text-align:center;font-size:12px;color:var(--accent-deep)}
-@media(min-width:900px){.cases{grid-template-columns:repeat(2,minmax(0,1fr))}.case.feature{grid-column:1/-1;flex-direction:row;align-items:stretch}.case.feature .frame{flex:0 0 60%;border-bottom:0;border-right:1px solid var(--paper-line);display:flex;flex-direction:column;justify-content:center}.case.feature.rev{flex-direction:row-reverse}.case.feature.rev .frame{border-right:0;border-left:1px solid var(--paper-line)}.case.feature .body{flex:1;align-content:center;padding:32px}}
 .case .body{padding:22px;display:grid;gap:14px;min-width:0}
 .case h3{font-size:22px;font-weight:800}
 .tag{display:inline-block;margin-top:8px;font-size:12px;padding:4px 12px;border-radius:999px;background:#FDEBE4;color:var(--accent-deep)}
 .case dl{margin:0;display:grid;gap:12px}
 .case dt{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-deep);font-weight:500}
 .case dd{margin:3px 0 0;font-size:15px;color:#3A4459}
+.gallery{margin-top:56px}
+.gallery h3{font-size:clamp(22px,3vw,30px);font-weight:800;text-align:center}
+.gallery>p{margin:10px auto 26px;text-align:center;max-width:62ch;color:var(--paper-muted);font-size:15.5px}
+.gal{display:grid;gap:18px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.gi{display:block;text-decoration:none;background:#E9ECF3;border:1px solid var(--paper-line);border-radius:16px;padding:12px;box-shadow:0 10px 30px rgba(20,27,45,.07)}
+.gi.wide{grid-column:1/-1}
+.gi img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--paper-line)}
+.gi span{display:block;margin-top:10px;text-align:center;font-size:12.5px;color:var(--accent-deep)}
+@media(max-width:700px){.gal{grid-template-columns:minmax(0,1fr)}}
 .proofcta{margin-top:42px;text-align:center}
 
 .offer .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(30px,5vw,70px);align-items:start}
@@ -281,8 +288,7 @@ footer.site{background:#070C17;border-top:1px solid var(--line);padding-block:44
         <p>Here is what I've done for the brands I've worked for.</p>
       </div>
       <div class="cases">
-        <article class="case feature">
-          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><a class="shotlink" href="haq-ads.png" target="_blank" rel="noopener"><img class="shotimg" src="haq-crop.png" alt="Meta Ads Manager showing Haq Electronics WhatsApp lead campaigns" width="1450" height="662" loading="lazy"><span class="tap">Meta Ads Manager, all time (tap to enlarge)</span></a></div>
+        <article class="case">
           <div class="body">
             <div><h3>Haq Electronics</h3><span class="tag">Electronics retailer</span></div>
             <dl>
@@ -292,8 +298,7 @@ footer.site{background:#070C17;border-top:1px solid var(--line);padding-block:44
             </dl>
           </div>
         </article>
-        <article class="case feature rev">
-          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><a class="shotlink" href="herchoice-ads.png" target="_blank" rel="noopener"><img class="shotimg" src="herchoice-crop.png" alt="Meta Ads Manager showing HerChoice purchase campaigns" width="1230" height="770" loading="lazy"><span class="tap">Meta Ads Manager, all time (tap to enlarge)</span></a><a class="shotlink second" href="herchoice-sales.png" target="_blank" rel="noopener"><img class="shotimg" src="herchoice-sales.png" alt="Shopify analytics for HerChoice showing PKR 17.2M gross sales and 8,682 orders" width="1134" height="417" loading="lazy"><span class="tap">Shopify sales report, all time (tap to enlarge)</span></a></div>
+        <article class="case">
           <div class="body">
             <div><h3>HerChoice</h3><span class="tag">Women's handbags</span></div>
             <dl>
@@ -303,8 +308,7 @@ footer.site{background:#070C17;border-top:1px solid var(--line);padding-block:44
             </dl>
           </div>
         </article>
-        <article class="case feature">
-          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><a class="shotlink" href="48hp-ads.png" target="_blank" rel="noopener"><img class="shotimg" src="48hp-crop.png" alt="Meta Ads Manager showing 48 Hours Plus purchase ad sets" width="1190" height="696" loading="lazy"><span class="tap">Meta Ads Manager, all time (tap to enlarge)</span></a><a class="shotlink second" href="48hp-sales.png" target="_blank" rel="noopener"><img class="shotimg" src="48hp-sales.png" alt="Shopify analytics for 48 Hours Plus showing PKR 2.3M gross sales and 1,258 orders" width="1139" height="430" loading="lazy"><span class="tap">Shopify sales report, last 365 days (tap to enlarge)</span></a></div>
+        <article class="case">
           <div class="body">
             <div><h3>48 Hours Plus</h3><span class="tag">Wellness food brand</span></div>
             <dl>
@@ -314,6 +318,17 @@ footer.site{background:#070C17;border-top:1px solid var(--line);padding-block:44
             </dl>
           </div>
         </article>
+      </div>
+      <div class="gallery">
+        <h3>The reports behind these numbers</h3>
+        <p>Real Meta Ads Manager and Shopify reports from the brands above. Brand and campaign names are hidden for privacy. Tap any report to enlarge.</p>
+        <div class="gal">
+          <a class="gi wide" href="proof-haq-ads.png" target="_blank" rel="noopener"><img src="proof-haq-ads.png" alt="Meta Ads Manager report" width="1287" height="411" loading="lazy"><span>Meta Ads Manager · all time</span></a>
+          <a class="gi" href="proof-herchoice-ads.png" target="_blank" rel="noopener"><img src="proof-herchoice-ads.png" alt="Meta Ads Manager report" width="1289" height="447" loading="lazy"><span>Meta Ads Manager · all time</span></a>
+          <a class="gi" href="proof-herchoice-sales.png" target="_blank" rel="noopener"><img src="proof-herchoice-sales.png" alt="Shopify sales report" width="1134" height="417" loading="lazy"><span>Shopify sales report · all time</span></a>
+          <a class="gi" href="proof-48hp-ads.png" target="_blank" rel="noopener"><img src="proof-48hp-ads.png" alt="Meta Ads Manager report" width="1280" height="426" loading="lazy"><span>Meta Ads Manager · all time</span></a>
+          <a class="gi" href="proof-48hp-sales.png" target="_blank" rel="noopener"><img src="proof-48hp-sales.png" alt="Shopify sales report" width="1139" height="430" loading="lazy"><span>Shopify sales report · last 365 days</span></a>
+        </div>
       </div>
       <div class="proofcta">
         <a class="cta" href="https://wa.me/923095697924?text=Hi%20Shahzeb%2C%20I%27d%20like%20to%20schedule%20an%20audit%20call%20for%20my%20store." target="_blank" rel="noopener"><b>Speak to me today</b><span>Schedule your audit call now</span></a>
