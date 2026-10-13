@@ -113,7 +113,7 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .shotimg{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--paper-line)}
 .shotlink{display:block;text-decoration:none}
 .tap{display:block;margin-top:8px;text-align:center;font-size:12px;color:var(--accent-deep)}
-@media(min-width:900px){.cases{grid-template-columns:repeat(2,minmax(0,1fr))}.case.feature{grid-column:1/-1;flex-direction:row;align-items:stretch}.case.feature .frame{flex:0 0 60%;border-bottom:0;border-right:1px solid var(--paper-line);display:flex;flex-direction:column;justify-content:center}.case.feature .body{flex:1;align-content:center;padding:32px}}
+@media(min-width:900px){.cases{grid-template-columns:repeat(2,minmax(0,1fr))}.case.feature{grid-column:1/-1;flex-direction:row;align-items:stretch}.case.feature .frame{flex:0 0 60%;border-bottom:0;border-right:1px solid var(--paper-line);display:flex;flex-direction:column;justify-content:center}.case.feature.rev{flex-direction:row-reverse}.case.feature.rev .frame{border-right:0;border-left:1px solid var(--paper-line)}.case.feature .body{flex:1;align-content:center;padding:32px}}
 .case .body{padding:22px;display:grid;gap:14px;min-width:0}
 .case h3{font-size:22px;font-weight:800}
 .tag{display:inline-block;margin-top:8px;font-size:12px;padding:4px 12px;border-radius:999px;background:#FDEBE4;color:var(--accent-deep)}
@@ -291,14 +291,14 @@ footer.site{background:#070C17;border-top:1px solid var(--line);padding-block:44
             </dl>
           </div>
         </article>
-        <article class="case">
-          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><div class="shot">Ads Manager screenshot goes here</div></div>
+        <article class="case feature rev">
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><a class="shotlink" href="herchoice-ads.png" target="_blank" rel="noopener"><img class="shotimg" src="herchoice-crop.png" alt="Meta Ads Manager showing HerChoice purchase campaigns" width="1230" height="770" loading="lazy"><span class="tap">Tap to view full screenshot</span></a></div>
           <div class="body">
             <div><h3>HerChoice</h3><span class="tag">Women's handbags</span></div>
             <dl>
-              <div><dt>Challenge</dt><dd>Launch an e-commerce brand and make paid ads profitable on a small budget.</dd></div>
-              <div><dt>What I did</dt><dd>Built the launch, creatives and Meta campaigns, then tracked orders and returns to scale what worked.</dd></div>
-              <div><dt>Result</dt><dd>A running brand and a large share of the PKR 50M+ in sales.</dd></div>
+              <div><dt>Challenge</dt><dd>They had the product but no proven way to sell it online.</dd></div>
+              <div><dt>What I did</dt><dd>Started their paid ads from zero, tested creatives and audiences, found what was profitable, then scaled it.</dd></div>
+              <div><dt>Result</dt><dd><b>11,804 purchases from Rs4.18M ad spend, at 5.59 average ROAS.</b></dd></div>
             </dl>
           </div>
         </article>
