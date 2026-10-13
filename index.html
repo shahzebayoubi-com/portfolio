@@ -144,11 +144,17 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .inquiry::before{content:"";position:absolute;left:50%;top:-30%;translate:-50% 0;width:min(900px,120vw);aspect-ratio:1;background:radial-gradient(closest-side,var(--glow),transparent 70%);pointer-events:none}
 .inquiry h2{font-size:clamp(32px,5.4vw,60px);font-weight:800;letter-spacing:-.025em;color:var(--accent)}
 .inquiry p{color:var(--muted);margin:16px auto 0;max-width:34em;font-size:17px}
-.inquiry .mail{color:var(--ink);font-weight:500;overflow-wrap:anywhere;user-select:all}
 .inquiry .cta{margin-top:30px}
-.foot{margin-top:56px;padding-top:26px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted);display:grid;gap:6px;justify-items:center}
-.foot b{font:800 18px var(--display);color:var(--ink)}
-.foot a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+footer.site{background:#070C17;border-top:1px solid var(--line);padding-block:44px 28px}
+.fgrid{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:28px 48px}
+.fbrand p{margin-top:10px;font-size:14.5px;color:var(--muted);max-width:26em}
+.fbrand .mark{font-size:17px}
+.fnav{display:flex;flex-wrap:wrap;gap:12px 28px}
+.fnav a{font-size:14.5px;color:var(--ink);text-decoration:none;opacity:.85;transition:opacity .2s,color .2s}
+.fnav a:hover{opacity:1;color:var(--accent2)}
+.fbase{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;margin-top:34px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.fbase a{color:var(--muted);text-decoration:none}
+.fbase a:hover{color:var(--ink)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
@@ -323,14 +329,30 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
   <section class="dark inquiry last">
     <div class="wrap">
       <h2>Have a general inquiry?</h2>
-      <p>If you have a question and want to talk to me directly, write to <span class="mail">Shahzebayoubi@gmail.com</span> or message me on WhatsApp.</p>
+      <p>Questions about your ads or your store? Start a conversation and I'll take it from there.</p>
       <a class="cta" href="https://wa.me/923095697924?text=Hi%20Shahzeb%2C%20I%27d%20like%20to%20schedule%20an%20audit%20call%20for%20my%20store." target="_blank" rel="noopener"><b>Speak to me today</b><span>Schedule your audit call now</span></a>
-      <div class="foot">
-        <b>SHAHZEB AYOUBI</b>
-        <span>Peshawar, Pakistan &middot; 0309-5697924 &middot; <a href="https://linkedin.com/in/shahzeb-ayoubi/" target="_blank" rel="noopener">LinkedIn</a></span>
-      </div>
     </div>
   </section>
 </main>
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a class="mark" href="#top">SHAHZEB <span>AYOUBI</span></a>
+        <p>Paid advertising for e-commerce businesses.</p>
+      </div>
+      <nav class="fnav" aria-label="Footer">
+        <a href="#proof">Proof of results</a>
+        <a href="#offer">What I offer</a>
+        <a href="#about">About me</a>
+        <a href="#call">Audit call</a>
+      </nav>
+    </div>
+    <div class="fbase">
+      <span>&copy; 2026 Shahzeb Ayoubi. All rights reserved.</span>
+      <a href="#top">Back to top &uarr;</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
